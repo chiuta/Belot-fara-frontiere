@@ -221,6 +221,7 @@ footer .quote{font-style:italic;color:#d6c9ac}
 <main id="main" class="wrap" tabindex="-1">
 
 <section id="view-atlas" role="tabpanel" aria-labelledby="tab-atlas">
+  <h2 class="sr" data-i="tab_atlas">Atlas</h2>
   <div class="toolrow">
     <label class="sr" for="q" data-i="q_label">Caută în atlas</label>
     <input type="search" id="q" data-iph="q_ph" placeholder="">
@@ -242,6 +243,7 @@ footer .quote{font-style:italic;color:#d6c9ac}
 </section>
 
 <section id="view-play" role="tabpanel" aria-labelledby="tab-play" hidden>
+  <h2 class="sr" data-i="tab_play">Joacă</h2>
   <details class="setup">
     <summary data-i="opt_summary">Configurare meci</summary>
     <div class="opts">
@@ -288,6 +290,7 @@ footer .quote{font-style:italic;color:#d6c9ac}
 </section>
 
 <section id="view-about" class="about" role="tabpanel" aria-labelledby="tab-about" hidden>
+  <h2 class="sr" data-i="tab_about">Despre</h2>
   <div id="aboutbox"></div>
 </section>
 </main>
@@ -2915,7 +2918,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 </script>
 <!-- tf-donate: sprijin voluntar (Patreon + Buy Me a Coffee) — self-contained, fără resurse externe, fără JS -->
-<div id="tf-donate" aria-label="Sprijină autorul">
+<aside id="tf-donate" aria-label="Sprijină autorul">
 <style>
 #tf-donate{position:fixed;right:14px;bottom:14px;z-index:2147483600;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1}
 #tf-donate *{box-sizing:border-box}
@@ -2943,6 +2946,6 @@ document.addEventListener('DOMContentLoaded', init);
 <label for="tf-donate-cb" class="tf-x" title="Ascunde" aria-label="Ascunde">✕</label>
 </div>
 <label for="tf-donate-cb" class="tf-open" title="Sprijină" aria-label="Sprijină">♥</label>
-</div>
+</aside>
 </body>
 </html>

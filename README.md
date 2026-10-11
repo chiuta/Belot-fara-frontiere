@@ -4,6 +4,8 @@ Atlas și joc contra AI local: belotul românesc și rudele lui (belote, contré
 
 **Live:** https://chiuta.github.io/Belot-fara-frontiere/
 
+Ultima actualizare: 11 octombrie 2026
+
 ![Captura de ecran](screenshot.png)
 
 ## Ce este
@@ -81,6 +83,11 @@ Diferențe regionale notate în aplicație: belot.md folosește bile și regulil
 ## Rulare locală
 
 Descarcă `index.html` și deschide-l în browser; funcționează complet fără internet. Fără server, fără instalare.
+
+## Istoric / Changelog
+
+### 11.10.2026 — 11 octombrie 2026
+- Accesibilitate: titluri de nivel 2 (ascunse vizual) pentru fiecare filă, blocul „Sprijină” ca regiune (aside) etichetată; verificare axe fără încălcări în ambele dimensiuni.
 
 ## Licență
 

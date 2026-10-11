@@ -23,6 +23,7 @@ Verificate în cod și în teste:
 - **AI cu 3 niveluri reale**: 0 aleator legal; 1 euristic (estimarea atuului din mână prin simulări, numărarea atuurilor, joc de partener); 2 căutare PIMC (simulări Monte-Carlo pe „lumi” compatibile cu ce a văzut). AI-ul **nu are acces la mâinile ascunse** (primește doar vederea jucătorului); excepție: opțiunea explicită „Mod învățare” care **îți arată** mâinile, AI-ul tot nu le folosește.
 - **Belot (K+Q de atu)**: la belotul românesc se anunță doar la a doua carte (AI-ul nu deduce nimic din prima carte); la celelalte variante, la prima, ca la Pagat.
 - **Sugestie** (H): AI-ul de nivel 2 îți propune o carte sau o licitație.
+- **Foaia de scor**: după a doua mână, fereastra de rezultat arată tabelul tuturor mâinilor meciului (puncte adăugate → total), în cele 7 limbi.
 - **Amestecare** cu `crypto.getRandomValues` și eșantionare prin respingere; **seed opțional** (mulberry32) pentru împărțiri reproductibile.
 - **Atlas** căutabil, filtrabil (jucabile/doar atlas, familie), cu fișe: reguli, diferențe regionale, ⚠ aproximări, surse.
 - **Interfață în 7 limbi** (RO/EN/FR/IT/ES/PT/DE), cu autodetecție și selector. Textele lungi (fișele din atlas, secțiunea Despre) sunt complete în română și engleză; în FR/IT/ES/PT/DE se afișează varianta engleză cu o notă discretă „text în engleză”.
@@ -85,6 +86,11 @@ Diferențe regionale notate în aplicație: belot.md folosește bile și regulil
 Descarcă `index.html` și deschide-l în browser; funcționează complet fără internet. Fără server, fără instalare.
 
 ## Istoric / Changelog
+
+### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
+- Foaia de scor a meciului în fereastra de rezultat (puncte adăugate și total pe fiecare mână), în cele 7 limbi.
+- Tabelul de rezultat al mâinii avea un antet de coloană gol (semnalat de axe când fereastra e deschisă); acum are etichetă (ascunsă vizual).
+- Spațiu liber sub conținut, ca widgetul fix „Sprijină” să nu mai poată acoperi ultimele butoane; CSP: `connect-src 'none'`.
 
 ### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
 - Etichetele scurte de pe cardurile din atlas (de ex. „4 jucători”, „32 cărți”, „atu în 2 ture”, „licitație”) erau afișate în română în orice limbă; acum sunt traduse în cele 7 limbi ale interfeței, iar căutarea din atlas le găsește și în limba aleasă.

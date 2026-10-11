@@ -8,7 +8,7 @@
   Aplicație single-file, offline, fără telemetrie. Licență: nedeclarată (decizia autorului).
   Sprijin voluntar (opțional): Patreon https://www.patreon.com/c/alexio_tf · Buy Me a Coffee https://buymeacoffee.com/echo.of.the.strings
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7Io3hG1IU22M4E8tibza9sB6Z2g3mEUlTpxdVQPbn40=' 'sha256-mHvlOTsM+NLnArNMZHd26EFjdae3+tcIjpNgKDq3wIU='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7Io3hG1IU22M4E8tibza9sB6Z2g3mEUlTpxdVQPbn40=' 'sha256-Md4so03CpEV7fEDImJNVBs470KInFB0C+x6YgecXT00='; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Belot fără frontiere: atlas și joc contra AI — belot românesc, belote, contrée, bela, klaverjas, jass. Offline, fără cont, fără telemetrie.">
 <meta name="theme-color" content="#0d0a08">
@@ -198,6 +198,7 @@ footer .quote{font-style:italic;color:#d6c9ac}
   .score .vl{font-size:1.6rem}
   .hand{gap:5px}
   dialog{max-width:calc(100vw - 8px)}.dlg-in{padding:16px 14px}
+  nav.tabs{flex-wrap:nowrap;gap:4px}nav.tabs button{padding:6px 10px;font-size:.92rem;min-width:0;line-height:1.2}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){.card{border:2px solid CanvasText}}
@@ -2206,6 +2207,28 @@ function tl(obj) { // text lung: RO complet, EN complet; alte limbi -> EN
   if (!obj) return '';
   return lang === 'ro' ? (obj.ro || obj.en) : (obj.en || obj.ro);
 }
+/* Etichetele scurte din atlas sunt scrise în română; se afișează în limba interfeței (nume proprii rămân neschimbate). */
+var TAG_PL = { en: ['player', 'players'], fr: ['joueur', 'joueurs'], it: ['giocatore', 'giocatori'], es: ['jugador', 'jugadores'], pt: ['jogador', 'jogadores'], de: ['Spieler', 'Spieler'] };
+var TAG_CD = { en: 'cards', fr: 'cartes', it: 'carte', es: 'cartas', pt: 'cartas', de: 'Karten' };
+var TAG_HD = { en: 'hands', fr: 'mains', it: 'mani', es: 'manos', pt: 'mãos', de: 'Runden' };
+var TAG_MAP = {
+  'atu în 2 ture': { en: 'trump in 2 rounds', fr: 'atout en 2 tours', it: 'briscola in 2 giri', es: 'triunfo en 2 rondas', pt: 'trunfo em 2 rondas', de: 'Trumpf in 2 Runden' },
+  'anunțuri': { en: 'declarations', fr: 'annonces', it: 'dichiarazioni', es: 'anuncios', pt: 'anúncios', de: 'Ansagen' },
+  'licitație': { en: 'bidding', fr: 'enchères', it: 'licitazione', es: 'subasta', pt: 'licitação', de: 'Reizen' },
+  'contra': { fr: 'contre', de: 'Kontra', es: 'contra', it: 'contro', pt: 'contra', en: 'double' },
+  'surcontra': { fr: 'surcontre', de: 'Re', es: 'recontra', it: 'surcontro', pt: 'recontra', en: 'redouble' },
+  'tai peste partener': { en: 'trump over partner', fr: 'couper sur le partenaire', it: 'tagliare sul compagno', es: 'fallar sobre el compañero', pt: 'cortar sobre o parceiro', de: 'über Partner stechen' },
+  'tabelă': { en: 'table', fr: 'tableau', it: 'tabella', es: 'tabla', pt: 'tabela', de: 'Tabelle' }
+};
+function tagText(x) {
+  if (lang === 'ro') return x;
+  var m = /^(\d+(?:[–-]\d+)?) jucători$/.exec(x);
+  if (m) { var pl = TAG_PL[lang] || TAG_PL.en; return m[1] + ' ' + (/^1$/.test(m[1]) ? pl[0] : pl[1]); }
+  m = /^([\d+]+) cărți$/.exec(x); if (m) return m[1] + ' ' + (TAG_CD[lang] || TAG_CD.en);
+  m = /^(\d+) mâini$/.exec(x); if (m) return m[1] + ' ' + (TAG_HD[lang] || TAG_HD.en);
+  if (TAG_MAP[x]) return TAG_MAP[x][lang] || TAG_MAP[x].en;
+  return x;
+}
 function longNote() { return (lang === 'ro' || lang === 'en') ? null : el('p', { class: 'langnote', text: t('text_in_english') }); }
 function suitName(s) { return t('suit' + s); }
 function rankName(r) { return t('rank' + r); }
@@ -2716,7 +2739,7 @@ function renderAtlas() {
     if (atlasFilter.mode === 'atlas' && a.play) return false;
     if (atlasFilter.fam !== 'all' && a.fam !== atlasFilter.fam) return false;
     if (q) {
-      var hay = norm([tl(a.name), tl(a.aka), tl(a.region), tl(a.summary), (a.tags || []).join(' ')].join(' '));
+      var hay = norm([tl(a.name), tl(a.aka), tl(a.region), tl(a.summary), (a.tags || []).join(' '), (a.tags || []).map(tagText).join(' ')].join(' '));
       if (hay.indexOf(q) < 0) return false;
     }
     return true;
@@ -2733,7 +2756,7 @@ function renderAtlas() {
     if (a.approx && a.approx.ro.length) bs.appendChild(el('span', { class: 'badge warn', text: '⚠ ' + t('badge_approx') }));
     card.appendChild(bs);
     card.appendChild(el('p', { text: tl(a.summary) }));
-    var tg = el('div', { class: 'tags' }); (a.tags || []).forEach(function (x) { tg.appendChild(el('span', { class: 'tag', text: x })); });
+    var tg = el('div', { class: 'tags' }); (a.tags || []).forEach(function (x) { tg.appendChild(el('span', { class: 'tag', text: tagText(x) })); });
     card.appendChild(tg);
     var row = el('div', { class: 'row' });
     row.appendChild(el('button', { type: 'button', class: 'btn', text: t('card_sheet'), onclick: function () { openSheet(a.id); } }));

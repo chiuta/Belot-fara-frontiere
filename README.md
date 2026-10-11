@@ -86,6 +86,10 @@ Descarcă `index.html` și deschide-l în browser; funcționează complet fără
 
 ## Istoric / Changelog
 
+### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
+- Etichetele scurte de pe cardurile din atlas (de ex. „4 jucători”, „32 cărți”, „atu în 2 ture”, „licitație”) erau afișate în română în orice limbă; acum sunt traduse în cele 7 limbi ale interfeței, iar căutarea din atlas le găsește și în limba aleasă.
+- Mobil (≤620 px): filele (Atlas, Joacă, Despre) încap pe un singur rând, antetul ocupă mai puțin loc.
+
 ### 11.10.2026 — 11 octombrie 2026
 - Accesibilitate: titluri de nivel 2 (ascunse vizual) pentru fiecare filă, blocul „Sprijină” ca regiune (aside) etichetată; verificare axe fără încălcări în ambele dimensiuni.
 

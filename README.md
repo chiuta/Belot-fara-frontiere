@@ -1,10 +1,10 @@
 # Belot fără frontiere
 
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+
 Atlas și joc contra AI local: belotul românesc și rudele lui (belote, contrée, bela, klaverjas, jass), într-un singur fișier HTML, offline.
 
 **Live:** https://chiuta.github.io/Belot-fara-frontiere/
-
-Ultima actualizare: 11 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -86,6 +86,9 @@ Diferențe regionale notate în aplicație: belot.md folosește bile și regulil
 Descarcă `index.html` și deschide-l în browser; funcționează complet fără internet. Fără server, fără instalare.
 
 ## Istoric / Changelog
+
+### 1.0.0 — 12 octombrie 2026
+- Versiunea și data ultimei actualizări sunt afișate în aplicație (subsol).
 
 ### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
 - Foaia de scor a meciului în fereastra de rezultat (puncte adăugate și total pe fiecare mână), în cele 7 limbi.

@@ -2,13 +2,15 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
+<meta name="application-version" content="1.0.0">
+<meta name="last-updated" content="2026-10-12">
 <!--
   Belot-fara-frontiere — atlas + joc (belot românesc, belote, contrée, bela, klaverjas, jass)
   Autor: Alexandru-Ionuț Chiuță (Alexio), alexio@trom.tf
   Aplicație single-file, offline, fără telemetrie. Licență: nedeclarată (decizia autorului).
   Sprijin voluntar (opțional): Patreon https://www.patreon.com/c/alexio_tf · Buy Me a Coffee https://buymeacoffee.com/echo.of.the.strings
 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7Io3hG1IU22M4E8tibza9sB6Z2g3mEUlTpxdVQPbn40=' 'sha256-/rwhuO49OBssCQEO/8W69DJ9sCEIARmbmA2xCoO8P6A='; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-7Io3hG1IU22M4E8tibza9sB6Z2g3mEUlTpxdVQPbn40=' 'sha256-0mdGUrXiszHDlBouvUiPwcqxwjrv8HNLXafa8E+M8JQ='; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Belot fără frontiere: atlas și joc contra AI — belot românesc, belote, contrée, bela, klaverjas, jass. Offline, fără cont, fără telemetrie.">
 <meta name="theme-color" content="#0d0a08">
@@ -305,6 +307,7 @@ footer .quote{font-style:italic;color:#d6c9ac}
 <footer><div class="wrap">
   <p class="quote" data-i="foot_quote"></p>
   <p data-i="foot_line"></p>
+  <p><span data-i="ver_lbl">Versiune</span> <span id="app-version">v1.0.0 · 2026-10-12</span></p>
 </div></footer>
 
 <script id="engine">
@@ -2159,6 +2162,7 @@ res_draw: ['Meci egal.', 'The match is a draw.', 'Partie nulle.', 'Partita pari.
 res_matchwin: ['Ați câștigat meciul!', 'You won the match!', 'Vous avez gagné la partie !', 'Avete vinto la partita!', '¡Habéis ganado la partida!', 'Ganharam o jogo!', 'Ihr habt die Partie gewonnen!'],
 res_matchlose: ['Adversarii au câștigat meciul.', 'The opponents won the match.', 'Les adversaires ont gagné la partie.', 'Gli avversari hanno vinto la partita.', 'Los rivales ganaron la partida.', 'Os adversários ganharam o jogo.', 'Die Gegner haben die Partie gewonnen.'],
 foot_quote: ['„Regulile în cod, nu de mână — și un adversar care nu se uită în cărțile tale.”', '“Rules in code, not by hand — and an opponent who never peeks at your cards.”', '« Les règles dans le code, pas à la main — et un adversaire qui ne regarde jamais vos cartes. »', '«Regole nel codice, non a mano — e un avversario che non sbircia le tue carte.»', '«Reglas en el código, no a mano — y un rival que nunca mira tus cartas.»', '“Regras no código, não à mão — e um adversário que nunca espreita as tuas cartas.”', '„Regeln im Code, nicht von Hand — und ein Gegner, der nie in deine Karten schaut.“'],
+ver_lbl: ['Versiune', 'Version', 'Version', 'Versione', 'Versión', 'Versão', 'Version'],
 foot_line: ['Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · fără troc (trade-free) · 100% offline · fără telemetrie, fără cont · licență: nedeclarată (decizia autorului)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100% offline · no telemetry, no account · licence: not declared (the author’s decision)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100 % hors ligne · sans télémétrie, sans compte · licence : non déclarée (décision de l’auteur)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100% offline · niente telemetria, niente account · licenza: non dichiarata (decide l’autore)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100 % sin conexión · sin telemetría, sin cuenta · licencia: no declarada (decisión del autor)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100% offline · sem telemetria, sem conta · licença: não declarada (decisão do autor)', 'Alexio — Alexandru-Ionuț Chiuță · Atlantykron · Centrul StrING · trade-free · 100 % offline · keine Telemetrie, kein Konto · Lizenz: nicht erklärt (Entscheidung des Autors)']
 };
 var out = {};

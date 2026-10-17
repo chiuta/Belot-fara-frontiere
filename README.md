@@ -69,7 +69,7 @@ Verificate în cod și în teste:
 - Regulile au fost verificate prin pagini publice (Pagat, belot.md, belot.bg, Wikipedia) citite prin sumare automate, nu din regulamente tipărite; nuanțele regionale pot fi rezumate greșit. Termenul „24” pentru capot nu a putut fi verificat într-o sursă și nu este folosit.
 - AI-ul este onest (nu vede cărțile ascunse), dar nu este un expert: nivelul 2 este un jucător bun de masă; la licitație folosește simulări scurte; modelează adversarii cu propria euristică, deci poate prefera să aștepte acolo unde un om ar trage atuul.
 - Nu e un joc de noroc cu miză: fără bani, premii sau conturi.
-- Fără licență declarată (vezi mai jos).
+- Licență MIT (vezi mai jos).
 
 ## Surse
 
@@ -107,7 +107,7 @@ Descarcă `index.html` și deschide-l în browser; funcționează complet fără
 
 ## Licență
 
-nedeclarată — decizia autorului
+MIT — vezi fișierul `LICENSE`.
 
 ## Autor
 

@@ -61,7 +61,7 @@ Verificate în cod și în teste:
 
 - Fără rețea: nu există `fetch`, `XMLHttpRequest`, `WebSocket` sau resurse externe; CSP `default-src 'none'` fără `connect-src`; scripturile rulează doar pe baza hash-urilor sha256 calculate la build; `style-src 'unsafe-inline'` este necesar pentru stilurile din pagină.
 - Fără telemetrie, fără cont, fără cookie-uri. În `localStorage` se păstrează doar limba, nivelul AI, culorile distincte, varianta și statisticile locale.
-- Singurele linkuri externe sunt cele din colțul paginii (Patreon, Buy Me a Coffee), cu `rel="noopener"`; se deschid doar la clic.
+- Singurele linkuri externe sunt cele din colțul paginii (Buy Me a Coffee), cu `rel="noopener"`; se deschid doar la clic.
 
 ## Limite și avertismente
 

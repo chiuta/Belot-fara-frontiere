@@ -1,77 +1,79 @@
 # Belot fără frontiere
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Atlas și joc contra AI local: belotul românesc și rudele lui (belote, contrée, bela, klaverjas, jass), într-un singur fișier HTML, offline.
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
 
-**Live:** https://chiuta.github.io/Belot-fara-frontiere/
+An atlas and a game against a local AI: Romanian belot and its relatives (belote, contrée, bela, klaverjas, jass), in a single HTML file, offline.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/Belot-fara-frontiere/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-Un atlas al familiei belote/bela/klaverjas/jass și un joc: tu și un partener AI contra doi adversari AI, la masă de 4 jucători. Prioritatea 1 este belotul românesc (32 de cărți, atu ales în două ture, anunțuri, obligația de a servi/tăia/supra-tăia, capot, joc până la 501/1001). Celelalte variante rulează pe același motor parametrizat. Totul este un singur `index.html` (~200 KB), fără dependențe, fără fonturi sau imagini externe, fără cont, fără telemetrie. Cărțile sunt desenate în CSS.
+## What it is
 
-## Funcții
+An atlas of the belote/bela/klaverjas/jass family and a game: you and an AI partner against two AI opponents, at a table of 4 players. Priority 1 is Romanian belot (32 cards, trump chosen in two rounds, announcements, the obligation to follow suit / trump / over-trump, capot, play to 501/1001). The other variants run on the same parameterised engine. Everything is a single `index.html` (~200 KB), with no dependencies, no external fonts or images, no account, no telemetry. The cards are drawn in CSS.
 
-Verificate în cod și în teste:
+## Features
 
-- **7 variante jucabile** (tabelul de mai jos) pe un motor parametrizat (licitație, obligații, punctare, anunțuri configurabile) și **5 intrări doar în atlas**.
-- **Belot românesc**: valori atu J 20, 9 14, A 11, 10 10, K 4, Q 3, 8/7 = 0; non-atu A 11, 10 10, K 4, Q 3, J 2; atu în două ture după cartea întoarsă (dealerul poate fi obligat în tura 2, opțional); anunțuri terță 20 / cincizeci 50 / sută 100 / careu (J 200, 9 150, A-10-K-Q 100) / belot 20; ultima levată +10 (total 162); capot +90; regula „la jumătate”/cădere documentată pe fișă; țintă 501 sau 1001.
-- **Obligații** de servit, tăiat și supra-tăiat (cu excepția partenerului care câștigă, unde regula variantei o permite), cărțile ilegale sunt estompate, iar încercarea de a le juca afișează motivul.
-- **Anunțuri** detectate automat (căutare exhaustivă a celei mai bune împărțiri în secvențe și careuri), concurs între echipe (egalitate = anulare în RO — opțional rotație —, rotație în celelalte), echipa fără levate pierde anunțurile (belotul rămâne).
-- **AI cu 3 niveluri reale**: 0 aleator legal; 1 euristic (estimarea atuului din mână prin simulări, numărarea atuurilor, joc de partener); 2 căutare PIMC (simulări Monte-Carlo pe „lumi” compatibile cu ce a văzut). AI-ul **nu are acces la mâinile ascunse** (primește doar vederea jucătorului); excepție: opțiunea explicită „Mod învățare” care **îți arată** mâinile, AI-ul tot nu le folosește.
-- **Belot (K+Q de atu)**: la belotul românesc se anunță doar la a doua carte (AI-ul nu deduce nimic din prima carte); la celelalte variante, la prima, ca la Pagat.
-- **Sugestie** (H): AI-ul de nivel 2 îți propune o carte sau o licitație.
-- **Foaia de scor**: după a doua mână, fereastra de rezultat arată tabelul tuturor mâinilor meciului (puncte adăugate → total), în cele 7 limbi.
-- **Amestecare** cu `crypto.getRandomValues` și eșantionare prin respingere; **seed opțional** (mulberry32) pentru împărțiri reproductibile.
-- **Atlas** căutabil, filtrabil (jucabile/doar atlas, familie), cu fișe: reguli, diferențe regionale, ⚠ aproximări, surse.
-- **Interfață în 7 limbi** (RO/EN/FR/IT/ES/PT/DE), cu autodetecție și selector. Textele lungi (fișele din atlas, secțiunea Despre) sunt complete în română și engleză; în FR/IT/ES/PT/DE se afișează varianta engleză cu o notă discretă „text în engleză”.
-- **Accesibilitate**: joc complet de la tastatură (săgeți + Enter/Spațiu, H pentru sugestie), `aria-live` pentru starea jocului, focus vizibil, ținte tactile de cel puțin 44 px, `prefers-reduced-motion`, mod de culori distincte pentru daltonism (♦ albastru, ♣ verde), fără scroll orizontal la 390 px.
-- Statistici locale (meciuri jucate/câștigate) și preferințe (limbă, nivel, culori) în `localStorage`, în blocuri `try/catch`; aplicația merge și fără ele.
+Verified in the code and in tests:
 
-## Variante
+- **7 playable variants** (table below) on a parameterised engine (bidding, obligations, scoring, configurable announcements) and **5 atlas-only entries**.
+- **Romanian belot**: trump values J 20, 9 14, A 11, 10 10, K 4, Q 3, 8/7 = 0; non-trump A 11, 10 10, K 4, Q 3, J 2; trump in two rounds after the turned-up card (the dealer can be forced in round 2, optional); announcements terță 20 / cincizeci 50 / sută 100 / careu (J 200, 9 150, A-10-K-Q 100) / belot 20; last trick +10 (total 162); capot +90; the "la jumătate"/fall rule documented on the sheet; target 501 or 1001.
+- **Obligations** to follow suit, trump and over-trump (except for a winning partner, where the variant's rule allows it); illegal cards are dimmed, and trying to play them shows the reason.
+- **Announcements** detected automatically (exhaustive search for the best split into sequences and four-of-a-kinds), contest between teams (tie = cancellation in RO — optionally rotation —, rotation in the others), the team with no tricks loses the announcements (the belot stays).
+- **AI with 3 real levels**: 0 random legal; 1 heuristic (estimating the trump from the hand through simulations, trump counting, partner play); 2 PIMC search (Monte Carlo simulations on "worlds" compatible with what it has seen). The AI **has no access to the hidden hands** (it receives only the player's view); exception: the explicit "Learning mode" option, which **shows you** the hands — the AI still does not use them.
+- **Belot (K+Q of trump)**: in Romanian belot it is announced only at the second card (the AI deduces nothing from the first card); in the other variants, at the first, as at Pagat.
+- **Hint** (H): the level-2 AI suggests a card or a bid.
+- **Score sheet**: after the second hand, the result window shows the table of all hands of the match (points added → total), in the 7 languages.
+- **Shuffling** with `crypto.getRandomValues` and rejection sampling; **optional seed** (mulberry32) for reproducible deals.
+- A searchable, filterable **Atlas** (playable/atlas-only, family), with sheets: rules, regional differences, ⚠ approximations, sources.
+- **Interface in 7 languages** (RO/EN/FR/IT/ES/PT/DE), with auto-detection and a selector. The long texts (the atlas sheets, the About section) are complete in Romanian and English; in FR/IT/ES/PT/DE the English version is displayed with a discreet "text in English" note.
+- **Accessibility**: fully keyboard-playable (arrows + Enter/Space, H for a hint), `aria-live` for the game state, visible focus, touch targets of at least 44 px, `prefers-reduced-motion`, a distinct-colours mode for colour blindness (♦ blue, ♣ green), no horizontal scroll at 390 px.
+- Local statistics (matches played/won) and preferences (language, level, colours) in `localStorage`, in `try/catch` blocks; the app also works without them.
 
-| Nume | Jucabil? | ⚠ Aproximări |
+## Variants
+
+| Name | Playable? | ⚠ Approximations |
 |---|---|---|
-| Belot românesc | da | ⚠ Nu există regulament oficial: „la jumătate”/cădere este alegerea autorului (cade ⇒ adversarii iau tot, belotul rămâne; egalitate = a ținut). Fără bile (puncte exacte), fără schimbul de 7, fără bizon. Cartea întoarsă merge mereu la cel care alege atuul. Anunțurile (terță/cincizeci/sută/careu) doar la prima carte; belotul se anunță doar la a doua carte. Două puncte disputate între surse sunt opțiuni în „Configurare meci”: tăiat obligatoriu și peste partener (belot.md) vs. scutit (Pagat; implicit scutit) și anunțuri egale anulate (belot.md; implicit) vs. primul în rotație (Pagat). |
-| Belote clasică (Franța) | da | ⚠ Egalitatea 81–81 nu aplică „litige”; punctele se țin exacte. |
-| Belote contrée (Coinche) | da | ⚠ Anunțurile de secvență/careu sunt dezactivate implicit (opțional, cu regulile belotului clasic); fără „sans atout/tout atout”; capot căzut 500 (alegere). |
-| Bela (Croația/Serbia) | da | ⚠ Doar jocul de bază cu 6 cărți la 4 jucători; fără „otvorena bela”; puncte exacte în loc de foaie de scor regională. |
-| Klaverjas Amsterdams | da | ⚠ Licitație simplificată (primul care nu dă pas alege atuul, ultimul e obligat); fără „verzaakt”, fără scor de turneu. |
-| Klaverjas Rotterdams | da | ⚠ Aceleași aproximări ca Amsterdams. |
-| Jass (Schieber, Elveția) | da | ⚠ Cărți franceze în loc de cărți elvețiene; multiplicatori de culoare (♠ ♦ ×2) și țintă 1500 alese documentat; weis simplificat (o singură echipă își punctează weis-urile; careul de 100 bate secvența de 100 și egalitatea totală merge pe rotație — neconfirmat într-o sursă); une-ufe cu 6 = 0 și As = 11 (alte mese: 6 = 11, As = 0); fără Differenzler/Coiffeur. |
-| Belot bulgar | doar atlas | ⚠ Contractele „fără atu”/„toate atu” nu sunt în motor. |
-| Belot în doi / în trei | doar atlas | ⚠ Motorul este construit pe 4 jucători în parteneriat. |
-| Baloot | doar atlas | ⚠ Nu este implementat. |
-| Clobyosh / Klabberjass | doar atlas | ⚠ Nu este implementat. |
-| Coiffeur (Jass) | doar atlas | ⚠ Nu are tabela de contracte. |
+| Romanian belot | yes | ⚠ There is no official rulebook: "la jumătate"/fall is the author's choice (a fall ⇒ the opponents take everything, the belot stays; a tie = it held). No "bile" (exact points), no 7 exchange, no bizon. The turned-up card always goes to the one who chooses the trump. Announcements (terță/cincizeci/sută/careu) only at the first card; the belot is announced only at the second card. Two points disputed between sources are options in "Match setup": mandatory trumping also over the partner (belot.md) vs. exempt (Pagat; default exempt) and equal announcements cancelled (belot.md; default) vs. first in rotation (Pagat). |
+| Classic belote (France) | yes | ⚠ The 81–81 tie does not apply "litige"; points are kept exact. |
+| Belote contrée (Coinche) | yes | ⚠ Sequence/four-of-a-kind announcements are disabled by default (optional, with the rules of classic belote); no "sans atout/tout atout"; capot fallen 500 (choice). |
+| Bela (Croatia/Serbia) | yes | ⚠ Only the basic game with 6 cards at 4 players; no "otvorena bela"; exact points instead of the regional score sheet. |
+| Klaverjas Amsterdams | yes | ⚠ Simplified bidding (the first who does not pass chooses the trump, the last is forced); no "verzaakt", no tournament scoring. |
+| Klaverjas Rotterdams | yes | ⚠ The same approximations as Amsterdams. |
+| Jass (Schieber, Switzerland) | yes | ⚠ French cards instead of Swiss cards; suit multipliers (♠ ♦ ×2) and target 1500 chosen and documented; simplified weis (only one team scores its weis; the four-of-a-kind of 100 beats the sequence of 100 and a total tie goes by rotation — unconfirmed in a source); une-ufe with 6 = 0 and Ace = 11 (other tables: 6 = 11, Ace = 0); no Differenzler/Coiffeur. |
+| Bulgarian belot | atlas only | ⚠ The "no trump"/"all trump" contracts are not in the engine. |
+| Belot for two / for three | atlas only | ⚠ The engine is built on 4 players in partnership. |
+| Baloot | atlas only | ⚠ Not implemented. |
+| Clobyosh / Klabberjass | atlas only | ⚠ Not implemented. |
+| Coiffeur (Jass) | atlas only | ⚠ It has no contract table. |
 
-## Manual de utilizare
+## User guide
 
-1. Deschide `index.html` (sau pagina Live). În fila **Atlas** citești fișele variantelor; ⚠ marchează aproximările.
-2. Apasă **▶ Joacă** pe o fișă sau treci în fila **Joacă** și alege varianta din „Configurare meci” (țintă, nivel AI, anunțuri, seed, mod învățare, culori distincte).
-3. Dealerul se rotește. În licitație, panoul de sus îți arată alegerile: „Iau” sau „Pas” (tura 1), apoi o culoare sau „Pas” (tura 2); la Contrée alegi culoarea și valoarea, apoi poți da contra/surcontra; la Jass alegi atu, obe-abe, une-ufe sau „Schieben”.
-4. La joc, cărțile aurii sunt cele legale, cele estompate sunt interzise. Click, sau săgeți și Enter/Spațiu pentru a juca. Dacă ai anunțuri, bifezi „Anunț” înainte de prima carte.
-5. Apasă **Sugestie (H)** pentru un sfat de la AI-ul puternic.
-6. La sfârșitul mâinii apare tabelul de puncte; **Mâna următoare** continuă, iar la atingerea țintei meciul se încheie. **Meci nou** resetează.
-7. Limba se schimbă din selectorul din dreapta sus; se reține în browser.
+1. Open `index.html` (or the Live page). In the **Atlas** tab you read the variant sheets; ⚠ marks the approximations.
+2. Press **▶ Play** on a sheet or go to the **Play** tab and choose the variant in "Match setup" (target, AI level, announcements, seed, learning mode, distinct colours).
+3. The dealer rotates. In the bidding, the top panel shows you the choices: "Take" or "Pass" (round 1), then a suit or "Pass" (round 2); at Contrée you choose the suit and the value, then you can double/redouble; at Jass you choose trump, obe-abe, une-ufe or "Schieben".
+4. In play, the golden cards are the legal ones, the dimmed ones are forbidden. Click, or arrows and Enter/Space to play. If you have announcements, tick "Announce" before the first card.
+5. Press **Hint (H)** for advice from the strong AI.
+6. At the end of the hand the points table appears; **Next hand** continues, and when the target is reached the match ends. **New match** resets.
+7. The language is changed from the selector at the top right; it is remembered in the browser.
 
-## Confidențialitate și rețea
+## Privacy and network
 
-- Fără rețea: nu există `fetch`, `XMLHttpRequest`, `WebSocket` sau resurse externe; CSP `default-src 'none'` fără `connect-src`; scripturile rulează doar pe baza hash-urilor sha256 calculate la build; `style-src 'unsafe-inline'` este necesar pentru stilurile din pagină.
-- Fără telemetrie, fără cont, fără cookie-uri. În `localStorage` se păstrează doar limba, nivelul AI, culorile distincte, varianta și statisticile locale.
-- Singurele linkuri externe sunt cele din colțul paginii (Buy Me a Coffee), cu `rel="noopener"`; se deschid doar la clic.
+- No network: there is no `fetch`, `XMLHttpRequest`, `WebSocket` or external resource; CSP `default-src 'none'` without `connect-src`; scripts run only on the basis of the sha256 hashes computed at build; `style-src 'unsafe-inline'` is necessary for the in-page styles.
+- No telemetry, no account, no cookies. `localStorage` keeps only the language, the AI level, the distinct colours, the variant and the local statistics.
+- The only external links are those in the corner of the page (Buy Me a Coffee), with `rel="noopener"`; they open only on click.
 
-## Limite și avertismente
+## Limits and warnings
 
-- Belotul nu are un regulament unic: regulile alese aici sunt documentate pe fiecare fișă; la mesele din România diferă (bile, „la jumătate”, bizon, schimbul de 7).
-- Regulile au fost verificate prin pagini publice (Pagat, belot.md, belot.bg, Wikipedia) citite prin sumare automate, nu din regulamente tipărite; nuanțele regionale pot fi rezumate greșit. Termenul „24” pentru capot nu a putut fi verificat într-o sursă și nu este folosit.
-- AI-ul este onest (nu vede cărțile ascunse), dar nu este un expert: nivelul 2 este un jucător bun de masă; la licitație folosește simulări scurte; modelează adversarii cu propria euristică, deci poate prefera să aștepte acolo unde un om ar trage atuul.
-- Nu e un joc de noroc cu miză: fără bani, premii sau conturi.
-- Licență MIT (vezi mai jos).
+- Belot has no single rulebook: the rules chosen here are documented on each sheet; at tables in Romania they differ (bile, "la jumătate", bizon, the 7 exchange).
+- The rules were checked through public pages (Pagat, belot.md, belot.bg, Wikipedia) read through automatic summaries, not from printed rulebooks; regional nuances may be summarised wrongly. The term "24" for capot could not be verified in a source and is not used.
+- The AI is honest (it does not see the hidden cards) but is not an expert: level 2 is a good table player; in bidding it uses short simulations; it models the opponents with its own heuristic, so it may prefer to wait where a human would pull the trumps.
+- It is not a game of chance with a stake: no money, prizes or accounts.
+- MIT License (see below).
 
-## Surse
+## Sources
 
 - Pagat.com: Belote, Coinche, Contrée, Bela, Belot, Klaverjassen, Schieber, Baloot — `https://www.pagat.com/jass/belote.html`, `/coinche.html`, `/contree.html`, `/bela.html`, `/belot.html`, `/klaverjassen.html`, `/schieber.html`, `/baloot.html`
 - Belot.md: https://belot.md/reguli_new.php
@@ -79,40 +81,40 @@ Verificate în cod și în teste:
 - Wikipedia: https://ro.wikipedia.org/wiki/Belot · https://en.wikipedia.org/wiki/Belot · https://fr.wikipedia.org/wiki/Belote_contr%C3%A9e · https://hr.wikipedia.org/wiki/Belot · https://en.wikipedia.org/wiki/Klaverjas
 - regles-du-jeu.net: https://www.regles-du-jeu.net/comment-compter-les-points-a-la-belote/
 
-Diferențe regionale notate în aplicație: belot.md folosește bile și regulile bizon/schimb de 7; Pagat pune contractul belote-ului la peste 81 și tratează 81–81 ca „litige”; capotul căzut la contrée este 500 sau 410 după sursă.
+Regional differences noted in the app: belot.md uses bile and the bizon/7 exchange rules; Pagat sets the belote contract at over 81 and treats 81–81 as "litige"; the fallen capot at contrée is 500 or 410 depending on the source.
 
-## Rulare locală
+## Running locally
 
-Descarcă `index.html` și deschide-l în browser; funcționează complet fără internet. Fără server, fără instalare.
+Download `index.html` and open it in the browser; it works fully without internet. No server, no installation.
 
-## Istoric / Changelog
+## History / Changelog
 
 ### 1.1.0 — 2026-10-14
-- Copie de rezervă și etichetare date (fff-kit).
+- Backup and data labelling (fff-kit).
 
-### 1.0.0 — 12 octombrie 2026
-- Versiunea și data ultimei actualizări sunt afișate în aplicație (subsol).
+### 1.0.0 — 12 October 2026
+- The version and the date of the last update are shown in the app (footer).
 
-### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
-- Foaia de scor a meciului în fereastra de rezultat (puncte adăugate și total pe fiecare mână), în cele 7 limbi.
-- Tabelul de rezultat al mâinii avea un antet de coloană gol (semnalat de axe când fereastra e deschisă); acum are etichetă (ascunsă vizual).
-- Spațiu liber sub conținut, ca widgetul fix „Sprijină” să nu mai poată acoperi ultimele butoane; CSP: `connect-src 'none'`.
+### 11.10.2026 (third update) — 11 October 2026
+- The match score sheet in the result window (points added and total for each hand), in the 7 languages.
+- The hand result table had an empty column header (flagged by axe when the window is open); it now has a (visually hidden) label.
+- Free space below the content, so that the fixed "Support" widget can no longer cover the last buttons; CSP: `connect-src 'none'`.
 
-### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
-- Etichetele scurte de pe cardurile din atlas (de ex. „4 jucători”, „32 cărți”, „atu în 2 ture”, „licitație”) erau afișate în română în orice limbă; acum sunt traduse în cele 7 limbi ale interfeței, iar căutarea din atlas le găsește și în limba aleasă.
-- Mobil (≤620 px): filele (Atlas, Joacă, Despre) încap pe un singur rând, antetul ocupă mai puțin loc.
+### 11.10.2026 (second update) — 11 October 2026
+- The short labels on the atlas cards (e.g. "4 players", "32 cards", "trump in 2 rounds", "bidding") were displayed in Romanian in every language; they are now translated into the 7 interface languages, and the atlas search finds them in the chosen language too.
+- Mobile (≤620 px): the tabs (Atlas, Play, About) fit on a single row, the header takes up less space.
 
-### 11.10.2026 — 11 octombrie 2026
-- Accesibilitate: titluri de nivel 2 (ascunse vizual) pentru fiecare filă, blocul „Sprijină” ca regiune (aside) etichetată; verificare axe fără încălcări în ambele dimensiuni.
+### 11.10.2026 — 11 October 2026
+- Accessibility: level-2 headings (visually hidden) for each tab, the "Support" block as a labelled region (aside); axe check with no violations at both sizes.
 
-## Licență
+## License
 
-MIT — vezi fișierul `LICENSE`.
+MIT — see the `LICENSE` file.
 
-## Autor
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
-## English summary
+## Summary
 
 Belot without borders is a single-file, offline atlas and game of the belote family: Romanian Belot (priority), classic French Belote, Belote contrée, Bela, Klaverjas (Amsterdam and Rotterdam) and Jass (Schieber) are playable against an AI that never sees hidden hands; five more relatives are atlas-only. Every approximation is flagged with ⚠. UI in 7 languages (long texts in Romanian and English only), keyboard-playable, colour-blind option, no network, no telemetry, no account. Licence: undeclared (the author's decision).

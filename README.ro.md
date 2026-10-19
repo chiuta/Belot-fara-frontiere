@@ -117,6 +117,6 @@ MIT — vezi fișierul `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
-## English summary
+## Rezumat
 
-Belot without borders is a single-file, offline atlas and game of the belote family: Romanian Belot (priority), classic French Belote, Belote contrée, Bela, Klaverjas (Amsterdam and Rotterdam) and Jass (Schieber) are playable against an AI that never sees hidden hands; five more relatives are atlas-only. Every approximation is flagged with ⚠. UI in 8 languages (long texts in Romanian and English only), keyboard-playable, colour-blind option, no network, no telemetry, no account. Licence: undeclared (the author's decision).
+Belot fără frontiere este un atlas și joc offline într-un singur fișier al familiei belote: Belotul românesc (prioritar), Belote clasic francez, Belote contrée, Bela, Klaverjas (Amsterdam și Rotterdam) și Jass (Schieber) se pot juca împotriva unui AI care nu vede niciodată mâinile ascunse; alte cinci rude sunt doar în atlas. Fiecare aproximare este marcată cu ⚠. Interfață în 8 limbi (texte lungi doar în română și engleză), joc cu tastatura, opțiune pentru daltonism, fără rețea, fără telemetrie, fără cont. Licență: nedeclarată (decizia autorului).

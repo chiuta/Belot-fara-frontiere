@@ -10,7 +10,7 @@ Atlante e gioco contro un'IA locale: il belot rumeno e i suoi parenti (belote, c
 
 **Applicazione online:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

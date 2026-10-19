@@ -10,7 +10,7 @@ An atlas and a game against a local AI: Romanian belot and its relatives (belote
 
 **Live app:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

@@ -10,7 +10,7 @@ Atlas et jeu contre une IA locale : le belot roumain et ses cousins (belote, con
 
 **Application en ligne :** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## De quoi s'agit-il
 

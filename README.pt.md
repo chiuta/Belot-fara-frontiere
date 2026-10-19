@@ -10,7 +10,7 @@ Atlas e jogo contra uma IA local: o belot romeno e os seus parentes (belote, con
 
 **Aplicação online:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

@@ -10,7 +10,7 @@ Atlas și joc contra AI local: belotul românesc și rudele lui (belote, contré
 
 **Live:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

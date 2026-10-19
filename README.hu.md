@@ -10,7 +10,7 @@ Atlasz és játék helyi MI ellen: a román belot és rokonai (belote, contrée,
 
 **Online alkalmazás:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

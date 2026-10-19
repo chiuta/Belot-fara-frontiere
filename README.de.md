@@ -10,7 +10,7 @@ Atlas und Spiel gegen eine lokale KI: das rumänische Belot und seine Verwandten
 
 **Online-Anwendung:** https://chiuta.github.io/Belot-fara-frontiere/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

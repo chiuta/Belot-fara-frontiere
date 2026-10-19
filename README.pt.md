@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.1.0 · **Última atualização:** 2026-10-14
+**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas e jogo contra uma IA local: o belot romeno e os seus parentes (belote, contrée, bela, klaverjas, jass), num único ficheiro HTML, offline.
 
@@ -25,10 +27,10 @@ Verificado no código e nos testes:
 - **IA com 3 níveis reais**: 0 aleatório legal; 1 heurístico (estimativa do trunfo a partir da mão por simulações, contagem de trunfos, jogo de parceiro); 2 pesquisa PIMC (simulações Monte Carlo sobre «mundos» compatíveis com o que viu). A IA **não tem acesso às mãos ocultas** (recebe apenas a vista do jogador); exceção: a opção explícita «Modo de aprendizagem», que **lhe mostra** as mãos — a IA continua a não as usar.
 - **Belot (K+Q de trunfo)**: no belot romeno anuncia-se apenas com a segunda carta (a IA não deduz nada da primeira carta); nas restantes variantes, com a primeira, como no Pagat.
 - **Sugestão** (H): a IA de nível 2 propõe-lhe uma carta ou uma licitação.
-- **Folha de pontuação**: após a segunda mão, a janela de resultado mostra a tabela de todas as mãos do jogo (pontos acrescentados → total), nas 7 línguas.
+- **Folha de pontuação**: após a segunda mão, a janela de resultado mostra a tabela de todas as mãos do jogo (pontos acrescentados → total), nas 8 línguas.
 - **Baralhamento** com `crypto.getRandomValues` e amostragem por rejeição; **semente opcional** (mulberry32) para distribuições reproduzíveis.
 - **Atlas** pesquisável e filtrável (jogáveis/apenas atlas, família), com fichas: regras, diferenças regionais, aproximações ⚠, fontes.
-- **Interface em 7 línguas** (RO/EN/FR/IT/ES/PT/DE), com deteção automática e seletor. Os textos longos (as fichas do atlas, a secção Acerca) estão completos em romeno e inglês; em FR/IT/ES/PT/DE é apresentada a versão inglesa com uma discreta nota «texto em inglês».
+- **Interface em 8 línguas** (RO/EN/FR/IT/ES/PT/DE/HU), com deteção automática e seletor. Os textos longos (as fichas do atlas, a secção Acerca) estão completos em romeno e inglês; em FR/IT/ES/PT/DE/HU é apresentada a versão inglesa com uma discreta nota «texto em inglês».
 - **Acessibilidade**: jogo completo por teclado (setas + Enter/Espaço, H para a sugestão), `aria-live` para o estado do jogo, foco visível, alvos táteis de pelo menos 44 px, `prefers-reduced-motion`, modo de cores distintas para o daltonismo (♦ azul, ♣ verde), sem deslocamento horizontal a 390 px.
 - Estatísticas locais (jogos disputados/ganhos) e preferências (língua, nível, cores) no `localStorage`, em blocos `try/catch`; a aplicação funciona também sem eles.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Resumo
 
-Belot sem fronteiras é um atlas e jogo de ficheiro único, offline, da família belote: o belot romeno (prioridade), a belote clássica francesa, a belote contrée, a bela, o klaverjas (Amesterdão e Roterdão) e o jass (Schieber) são jogáveis contra uma IA que nunca vê as mãos ocultas; mais cinco parentes são apenas de atlas. Cada aproximação está assinalada com ⚠. Interface em 7 línguas (textos longos apenas em romeno e inglês), jogável por teclado, opção para daltónicos, sem rede, sem telemetria, sem conta. Licença: não declarada (decisão do autor).
+Belot sem fronteiras é um atlas e jogo de ficheiro único, offline, da família belote: o belot romeno (prioridade), a belote clássica francesa, a belote contrée, a bela, o klaverjas (Amesterdão e Roterdão) e o jass (Schieber) são jogáveis contra uma IA que nunca vê as mãos ocultas; mais cinco parentes são apenas de atlas. Cada aproximação está assinalada com ⚠. Interface em 8 línguas (textos longos apenas em romeno e inglês), jogável por teclado, opção para daltónicos, sem rede, sem telemetria, sem conta. Licença: não declarada (decisão do autor).

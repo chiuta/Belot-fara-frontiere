@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.1.0 · **Última actualización:** 2026-10-14
+**Versión:** 1.2.0 · **Última actualización:** 2026-10-19
+
+Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas y juego contra una IA local: el belot rumano y sus parientes (belote, contrée, bela, klaverjas, jass), en un único archivo HTML, sin conexión.
 
@@ -25,10 +27,10 @@ Verificado en el código y en las pruebas:
 - **IA con 3 niveles reales**: 0 aleatorio legal; 1 heurístico (estimación del triunfo a partir de la mano mediante simulaciones, recuento de triunfos, juego de compañero); 2 búsqueda PIMC (simulaciones Monte Carlo sobre «mundos» compatibles con lo que ha visto). La IA **no tiene acceso a las manos ocultas** (recibe solo la vista del jugador); excepción: la opción explícita «Modo aprendizaje», que **te muestra** las manos — la IA sigue sin usarlas.
 - **Belot (K+Q de triunfo)**: en el belot rumano se anuncia solo con la segunda carta (la IA no deduce nada de la primera carta); en las demás variantes, con la primera, como en Pagat.
 - **Sugerencia** (H): la IA de nivel 2 te propone una carta o una puja.
-- **Hoja de puntuación**: tras la segunda mano, la ventana de resultado muestra la tabla de todas las manos de la partida (puntos añadidos → total), en los 7 idiomas.
+- **Hoja de puntuación**: tras la segunda mano, la ventana de resultado muestra la tabla de todas las manos de la partida (puntos añadidos → total), en los 8 idiomas.
 - **Barajado** con `crypto.getRandomValues` y muestreo por rechazo; **semilla opcional** (mulberry32) para repartos reproducibles.
 - **Atlas** con búsqueda y filtros (jugables/solo atlas, familia), con fichas: reglas, diferencias regionales, aproximaciones ⚠, fuentes.
-- **Interfaz en 7 idiomas** (RO/EN/FR/IT/ES/PT/DE), con autodetección y selector. Los textos largos (las fichas del atlas, la sección Acerca de) están completos en rumano e inglés; en FR/IT/ES/PT/DE se muestra la versión en inglés con una discreta nota «texto en inglés».
+- **Interfaz en 8 idiomas** (RO/EN/FR/IT/ES/PT/DE/HU), con autodetección y selector. Los textos largos (las fichas del atlas, la sección Acerca de) están completos en rumano e inglés; en FR/IT/ES/PT/DE/HU se muestra la versión en inglés con una discreta nota «texto en inglés».
 - **Accesibilidad**: juego completo con teclado (flechas + Intro/Espacio, H para la sugerencia), `aria-live` para el estado del juego, foco visible, áreas táctiles de al menos 44 px, `prefers-reduced-motion`, modo de colores distintos para el daltonismo (♦ azul, ♣ verde), sin desplazamiento horizontal a 390 px.
 - Estadísticas locales (partidas jugadas/ganadas) y preferencias (idioma, nivel, colores) en `localStorage`, en bloques `try/catch`; la aplicación funciona también sin ellos.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Resumen
 
-Belot sin fronteras es un atlas y juego de un solo archivo, sin conexión, de la familia belote: el belot rumano (prioridad), la belote clásica francesa, la belote contrée, la bela, el klaverjas (Ámsterdam y Róterdam) y el jass (Schieber) son jugables contra una IA que nunca ve las manos ocultas; otros cinco parientes son solo de atlas. Cada aproximación está señalada con ⚠. Interfaz en 7 idiomas (textos largos solo en rumano e inglés), jugable con teclado, opción para daltónicos, sin red, sin telemetría, sin cuenta. Licencia: no declarada (decisión del autor).
+Belot sin fronteras es un atlas y juego de un solo archivo, sin conexión, de la familia belote: el belot rumano (prioridad), la belote clásica francesa, la belote contrée, la bela, el klaverjas (Ámsterdam y Róterdam) y el jass (Schieber) son jugables contra una IA que nunca ve las manos ocultas; otros cinco parientes son solo de atlas. Cada aproximación está señalada con ⚠. Interfaz en 8 idiomas (textos largos solo en rumano e inglés), jugable con teclado, opción para daltónicos, sin red, sin telemetría, sin cuenta. Licencia: no declarada (decisión del autor).

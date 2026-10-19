@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.1.0 · **Ultimo aggiornamento:** 2026-10-14
+**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlante e gioco contro un'IA locale: il belot rumeno e i suoi parenti (belote, contrée, bela, klaverjas, jass), in un unico file HTML, offline.
 
@@ -25,10 +27,10 @@ Verificato nel codice e nei test:
 - **IA a 3 livelli reali**: 0 casuale legale; 1 euristica (stima della briscola dalla mano tramite simulazioni, conteggio delle briscole, gioco da compagno); 2 ricerca PIMC (simulazioni Monte Carlo su «mondi» compatibili con ciò che ha visto). L'IA **non ha accesso alle mani nascoste** (riceve solo la vista del giocatore); eccezione: l'opzione esplicita «Modalità apprendimento», che **ti mostra** le mani — l'IA continua a non usarle.
 - **Belot (K+Q di briscola)**: nel belot rumeno si dichiara solo alla seconda carta (l'IA non deduce nulla dalla prima carta); nelle altre varianti, alla prima, come da Pagat.
 - **Suggerimento** (H): l'IA di livello 2 ti propone una carta o una licitazione.
-- **Foglio punteggio**: dopo la seconda mano, la finestra del risultato mostra la tabella di tutte le mani della partita (punti aggiunti → totale), nelle 7 lingue.
+- **Foglio punteggio**: dopo la seconda mano, la finestra del risultato mostra la tabella di tutte le mani della partita (punti aggiunti → totale), nelle 8 lingue.
 - **Mescolamento** con `crypto.getRandomValues` e campionamento per rifiuto; **seme facoltativo** (mulberry32) per distribuzioni riproducibili.
 - **Atlante** ricercabile, filtrabile (giocabili/solo atlante, famiglia), con schede: regole, differenze regionali, approssimazioni ⚠, fonti.
-- **Interfaccia in 7 lingue** (RO/EN/FR/IT/ES/PT/DE), con rilevamento automatico e selettore. I testi lunghi (le schede dell'atlante, la sezione Informazioni) sono completi in rumeno e inglese; in FR/IT/ES/PT/DE viene mostrata la versione inglese con una discreta nota «testo in inglese».
+- **Interfaccia in 8 lingue** (RO/EN/FR/IT/ES/PT/DE/HU), con rilevamento automatico e selettore. I testi lunghi (le schede dell'atlante, la sezione Informazioni) sono completi in rumeno e inglese; in FR/IT/ES/PT/DE/HU viene mostrata la versione inglese con una discreta nota «testo in inglese».
 - **Accessibilità**: gioco completo da tastiera (frecce + Invio/Spazio, H per il suggerimento), `aria-live` per lo stato del gioco, focus visibile, aree touch di almeno 44 px, `prefers-reduced-motion`, modalità a colori distinti per il daltonismo (♦ blu, ♣ verde), nessuno scorrimento orizzontale a 390 px.
 - Statistiche locali (partite giocate/vinte) e preferenze (lingua, livello, colori) in `localStorage`, in blocchi `try/catch`; l'applicazione funziona anche senza.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Riepilogo
 
-Belot senza frontiere è un atlante e gioco in un unico file, offline, della famiglia belote: il belot rumeno (priorità), la belote classica francese, la belote contrée, la bela, il klaverjas (Amsterdam e Rotterdam) e il jass (Schieber) sono giocabili contro un'IA che non vede mai le mani nascoste; altri cinque parenti sono solo atlante. Ogni approssimazione è segnalata con ⚠. Interfaccia in 7 lingue (testi lunghi solo in rumeno e inglese), giocabile da tastiera, opzione per daltonici, nessuna rete, nessuna telemetria, nessun account. Licenza: non dichiarata (decisione dell'autore).
+Belot senza frontiere è un atlante e gioco in un unico file, offline, della famiglia belote: il belot rumeno (priorità), la belote classica francese, la belote contrée, la bela, il klaverjas (Amsterdam e Rotterdam) e il jass (Schieber) sono giocabili contro un'IA che non vede mai le mani nascoste; altri cinque parenti sono solo atlante. Ogni approssimazione è segnalata con ⚠. Interfaccia in 8 lingue (testi lunghi solo in rumeno e inglese), giocabile da tastiera, opzione per daltonici, nessuna rete, nessuna telemetria, nessun account. Licenza: non dichiarata (decisione dell'autore).

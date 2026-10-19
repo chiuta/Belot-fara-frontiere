@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlasz és játék helyi MI ellen: a román belot és rokonai (belote, contrée, bela, klaverjas, jass), egyetlen HTML-fájlban, offline.
 
@@ -25,10 +27,10 @@ A kódban és a tesztekben ellenőrizve:
 - **MI 3 valódi szinttel**: 0 véletlenszerű szabályos; 1 heurisztikus (az adu becslése a kézből szimulációkkal, adu számolás, partnerjáték); 2 PIMC-keresés (Monte Carlo szimulációk a látottakkal összeegyeztethető „világokon”). Az MI-nek **nincs hozzáférése a rejtett kezekhez** (csak a játékos nézetét kapja); kivétel: a kifejezett „Tanulási mód” opció, amely **neked** megmutatja a kezeket — az MI ezeket ettől még nem használja.
 - **Belot (adu K+Q)**: a román belotnál csak a második lapnál mondják be (az MI nem következtet semmire az első lapból); a többi változatnál az elsőnél, mint a Pagatnál.
 - **Tipp** (H): a 2. szintű MI lapot vagy licitet javasol neked.
-- **Pontozólap**: a második leosztás után az eredményablak megmutatja a meccs összes leosztásának táblázatát (hozzáadott pontok → összesen), a 7 nyelven.
+- **Pontozólap**: a második leosztás után az eredményablak megmutatja a meccs összes leosztásának táblázatát (hozzáadott pontok → összesen), a 8 nyelven.
 - **Keverés** `crypto.getRandomValues`-szal és elutasításos mintavételezéssel; **opcionális mag** (mulberry32) reprodukálható leosztásokhoz.
 - Kereshető, szűrhető **Atlasz** (játszható/csak atlasz, család), lapokkal: szabályok, regionális eltérések, ⚠ közelítések, források.
-- **Felület 7 nyelven** (RO/EN/FR/IT/ES/PT/DE), automatikus felismeréssel és választóval. A hosszú szövegek (az atlaszlapok, a Névjegy szakasz) románul és angolul teljesek; az FR/IT/ES/PT/DE nyelveken az angol változat jelenik meg egy diszkrét „szöveg angolul” megjegyzéssel.
+- **Felület 8 nyelven** (RO/EN/FR/IT/ES/PT/DE/HU), automatikus felismeréssel és választóval. A hosszú szövegek (az atlaszlapok, a Névjegy szakasz) románul és angolul teljesek; az FR/IT/ES/PT/DE/HU nyelveken az angol változat jelenik meg egy diszkrét „szöveg angolul” megjegyzéssel.
 - **Akadálymentesség**: teljesen játszható billentyűzettel (nyilak + Enter/Szóköz, H a tipphez), `aria-live` a játékállapothoz, látható fókusz, legalább 44 px-es érintési célpontok, `prefers-reduced-motion`, megkülönböztethető színek módja a színvakság esetére (♦ kék, ♣ zöld), nincs vízszintes görgetés 390 px-en.
 - Helyi statisztikák (lejátszott/megnyert meccsek) és beállítások (nyelv, szint, színek) a `localStorage`-ban, `try/catch` blokkokban; az alkalmazás ezek nélkül is működik.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Összefoglaló
 
-A Belot határok nélkül egyetlen fájlból álló, offline atlasz és játék a belote családról: a román belot (prioritás), a klasszikus francia belote, a belote contrée, a bela, a klaverjas (Amszterdam és Rotterdam) és a jass (Schieber) játszható egy olyan MI ellen, amely sosem lát rejtett kezeket; további öt rokon csak az atlaszban szerepel. Minden közelítés ⚠ jelzéssel van ellátva. Felület 7 nyelven (a hosszú szövegek csak románul és angolul), billentyűzettel játszható, színvak opció, hálózat, telemetria és fiók nélkül. Licenc: nem deklarált (a szerző döntése).
+A Belot határok nélkül egyetlen fájlból álló, offline atlasz és játék a belote családról: a román belot (prioritás), a klasszikus francia belote, a belote contrée, a bela, a klaverjas (Amszterdam és Rotterdam) és a jass (Schieber) játszható egy olyan MI ellen, amely sosem lát rejtett kezeket; további öt rokon csak az atlaszban szerepel. Minden közelítés ⚠ jelzéssel van ellátva. Felület 8 nyelven (a hosszú szövegek csak románul és angolul), billentyűzettel játszható, színvak opció, hálózat, telemetria és fiók nélkül. Licenc: nem deklarált (a szerző döntése).

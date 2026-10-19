@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.1.0 · **Dernière mise à jour :** 2026-10-14
+**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas et jeu contre une IA locale : le belot roumain et ses cousins (belote, contrée, bela, klaverjas, jass), dans un seul fichier HTML, hors ligne.
 
@@ -25,10 +27,10 @@ Vérifié dans le code et dans les tests :
 - **IA à 3 niveaux réels** : 0 aléatoire légal ; 1 heuristique (estimation de l'atout à partir de la main par simulations, comptage des atouts, jeu de partenaire) ; 2 recherche PIMC (simulations Monte-Carlo sur des « mondes » compatibles avec ce qu'elle a vu). L'IA **n'a pas accès aux mains cachées** (elle reçoit seulement la vue du joueur) ; exception : l'option explicite « Mode apprentissage », qui **vous montre** les mains — l'IA ne les utilise toujours pas.
 - **Belot (R+D d'atout)** : au belot roumain, il ne s'annonce qu'à la deuxième carte (l'IA ne déduit rien de la première carte) ; dans les autres variantes, à la première, comme chez Pagat.
 - **Suggestion** (H) : l'IA de niveau 2 vous propose une carte ou une enchère.
-- **Feuille de score** : après la deuxième main, la fenêtre de résultat affiche le tableau de toutes les mains de la partie (points ajoutés → total), dans les 7 langues.
+- **Feuille de score** : après la deuxième main, la fenêtre de résultat affiche le tableau de toutes les mains de la partie (points ajoutés → total), dans les 8 langues.
 - **Mélange** avec `crypto.getRandomValues` et échantillonnage par rejet ; **graine optionnelle** (mulberry32) pour des donnes reproductibles.
 - **Atlas** consultable, filtrable (jouables/atlas seulement, famille), avec des fiches : règles, différences régionales, approximations ⚠, sources.
-- **Interface en 7 langues** (RO/EN/FR/IT/ES/PT/DE), avec détection automatique et sélecteur. Les textes longs (fiches de l'atlas, section À propos) sont complets en roumain et en anglais ; en FR/IT/ES/PT/DE, la version anglaise s'affiche avec une discrète note « texte en anglais ».
+- **Interface en 8 langues** (RO/EN/FR/IT/ES/PT/DE/HU), avec détection automatique et sélecteur. Les textes longs (fiches de l'atlas, section À propos) sont complets en roumain et en anglais ; en FR/IT/ES/PT/DE/HU, la version anglaise s'affiche avec une discrète note « texte en anglais ».
 - **Accessibilité** : jeu complet au clavier (flèches + Entrée/Espace, H pour la suggestion), `aria-live` pour l'état du jeu, focus visible, cibles tactiles d'au moins 44 px, `prefers-reduced-motion`, mode de couleurs distinctes pour le daltonisme (♦ bleu, ♣ vert), pas de défilement horizontal à 390 px.
 - Statistiques locales (parties jouées/gagnées) et préférences (langue, niveau, couleurs) dans `localStorage`, dans des blocs `try/catch` ; l'application fonctionne aussi sans eux.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Résumé
 
-Belot sans frontières est un atlas et jeu monofichier, hors ligne, de la famille belote : le belot roumain (priorité), la belote classique française, la belote contrée, la bela, le klaverjas (Amsterdam et Rotterdam) et le jass (Schieber) sont jouables contre une IA qui ne voit jamais les mains cachées ; cinq autres cousins sont réservés à l'atlas. Chaque approximation est signalée par ⚠. Interface en 7 langues (textes longs en roumain et en anglais seulement), jouable au clavier, option daltonisme, sans réseau, sans télémétrie, sans compte. Licence : non déclarée (décision de l'auteur).
+Belot sans frontières est un atlas et jeu monofichier, hors ligne, de la famille belote : le belot roumain (priorité), la belote classique française, la belote contrée, la bela, le klaverjas (Amsterdam et Rotterdam) et le jass (Schieber) sont jouables contre une IA qui ne voit jamais les mains cachées ; cinq autres cousins sont réservés à l'atlas. Chaque approximation est signalée par ⚠. Interface en 8 langues (textes longs en roumain et en anglais seulement), jouable au clavier, option daltonisme, sans réseau, sans télémétrie, sans compte. Licence : non déclarée (décision de l'auteur).

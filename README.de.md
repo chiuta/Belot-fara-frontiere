@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Atlas und Spiel gegen eine lokale KI: das rumänische Belot und seine Verwandten (Belote, Contrée, Bela, Klaverjas, Jass), in einer einzigen HTML-Datei, offline.
 
@@ -25,10 +27,10 @@ Im Code und in Tests geprüft:
 - **KI mit 3 echten Stufen**: 0 zufällig legal; 1 heuristisch (Schätzung des Trumpfs aus der Hand durch Simulationen, Trumpfzählen, Partnerspiel); 2 PIMC-Suche (Monte-Carlo-Simulationen auf „Welten“, die mit dem Gesehenen vereinbar sind). Die KI **hat keinen Zugriff auf die verdeckten Hände** (sie erhält nur die Sicht des Spielers); Ausnahme: die ausdrückliche Option „Lernmodus“, die **dir** die Hände zeigt — die KI nutzt sie trotzdem nicht.
 - **Belot (K+D von Trumpf)**: Beim rumänischen Belot wird es nur bei der zweiten Karte angesagt (die KI folgert nichts aus der ersten Karte); bei den anderen Varianten bei der ersten, wie bei Pagat.
 - **Hinweis** (H): Die KI der Stufe 2 schlägt dir eine Karte oder ein Gebot vor.
-- **Punktblatt**: Nach der zweiten Hand zeigt das Ergebnisfenster die Tabelle aller Hände des Spiels (hinzugefügte Punkte → Summe), in den 7 Sprachen.
+- **Punktblatt**: Nach der zweiten Hand zeigt das Ergebnisfenster die Tabelle aller Hände des Spiels (hinzugefügte Punkte → Summe), in den 8 Sprachen.
 - **Mischen** mit `crypto.getRandomValues` und Rejection Sampling; **optionaler Seed** (mulberry32) für reproduzierbare Kartenverteilungen.
 - **Atlas** durchsuchbar und filterbar (spielbar/nur Atlas, Familie), mit Blättern: Regeln, regionale Unterschiede, ⚠ Näherungen, Quellen.
-- **Oberfläche in 7 Sprachen** (RO/EN/FR/IT/ES/PT/DE), mit automatischer Erkennung und Auswahl. Die langen Texte (die Atlasblätter, der Abschnitt Über) sind auf Rumänisch und Englisch vollständig; in FR/IT/ES/PT/DE wird die englische Fassung mit einem dezenten Hinweis „Text auf Englisch“ angezeigt.
+- **Oberfläche in 8 Sprachen** (RO/EN/FR/IT/ES/PT/DE/HU), mit automatischer Erkennung und Auswahl. Die langen Texte (die Atlasblätter, der Abschnitt Über) sind auf Rumänisch und Englisch vollständig; in FR/IT/ES/PT/DE/HU wird die englische Fassung mit einem dezenten Hinweis „Text auf Englisch“ angezeigt.
 - **Barrierefreiheit**: vollständig per Tastatur spielbar (Pfeile + Enter/Leertaste, H für den Hinweis), `aria-live` für den Spielzustand, sichtbarer Fokus, Touch-Ziele von mindestens 44 px, `prefers-reduced-motion`, ein Modus mit unterscheidbaren Farben bei Farbenblindheit (♦ blau, ♣ grün), kein horizontales Scrollen bei 390 px.
 - Lokale Statistiken (gespielte/gewonnene Spiele) und Einstellungen (Sprache, Stufe, Farben) in `localStorage`, in `try/catch`-Blöcken; die Anwendung funktioniert auch ohne sie.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Zusammenfassung
 
-Belot ohne Grenzen ist ein Atlas und Spiel in einer einzigen Datei, offline, der Belote-Familie: das rumänische Belot (Priorität), die klassische französische Belote, die Belote contrée, Bela, Klaverjas (Amsterdam und Rotterdam) und Jass (Schieber) sind gegen eine KI spielbar, die nie verdeckte Hände sieht; fünf weitere Verwandte sind nur im Atlas. Jede Näherung ist mit ⚠ gekennzeichnet. Oberfläche in 7 Sprachen (lange Texte nur auf Rumänisch und Englisch), per Tastatur spielbar, Option für Farbenblinde, kein Netzwerk, keine Telemetrie, kein Konto. Lizenz: nicht erklärt (Entscheidung des Autors).
+Belot ohne Grenzen ist ein Atlas und Spiel in einer einzigen Datei, offline, der Belote-Familie: das rumänische Belot (Priorität), die klassische französische Belote, die Belote contrée, Bela, Klaverjas (Amsterdam und Rotterdam) und Jass (Schieber) sind gegen eine KI spielbar, die nie verdeckte Hände sieht; fünf weitere Verwandte sind nur im Atlas. Jede Näherung ist mit ⚠ gekennzeichnet. Oberfläche in 8 Sprachen (lange Texte nur auf Rumänisch und Englisch), per Tastatur spielbar, Option für Farbenblinde, kein Netzwerk, keine Telemetrie, kein Konto. Lizenz: nicht erklärt (Entscheidung des Autors).

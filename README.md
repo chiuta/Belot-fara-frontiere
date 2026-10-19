@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Last updated:** 2026-10-14
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An atlas and a game against a local AI: Romanian belot and its relatives (belote, contrée, bela, klaverjas, jass), in a single HTML file, offline.
 
@@ -25,10 +27,10 @@ Verified in the code and in tests:
 - **AI with 3 real levels**: 0 random legal; 1 heuristic (estimating the trump from the hand through simulations, trump counting, partner play); 2 PIMC search (Monte Carlo simulations on "worlds" compatible with what it has seen). The AI **has no access to the hidden hands** (it receives only the player's view); exception: the explicit "Learning mode" option, which **shows you** the hands — the AI still does not use them.
 - **Belot (K+Q of trump)**: in Romanian belot it is announced only at the second card (the AI deduces nothing from the first card); in the other variants, at the first, as at Pagat.
 - **Hint** (H): the level-2 AI suggests a card or a bid.
-- **Score sheet**: after the second hand, the result window shows the table of all hands of the match (points added → total), in the 7 languages.
+- **Score sheet**: after the second hand, the result window shows the table of all hands of the match (points added → total), in the 8 languages.
 - **Shuffling** with `crypto.getRandomValues` and rejection sampling; **optional seed** (mulberry32) for reproducible deals.
 - A searchable, filterable **Atlas** (playable/atlas-only, family), with sheets: rules, regional differences, ⚠ approximations, sources.
-- **Interface in 7 languages** (RO/EN/FR/IT/ES/PT/DE), with auto-detection and a selector. The long texts (the atlas sheets, the About section) are complete in Romanian and English; in FR/IT/ES/PT/DE the English version is displayed with a discreet "text in English" note.
+- **Interface in 8 languages** (RO/EN/FR/IT/ES/PT/DE/HU), with auto-detection and a selector. The long texts (the atlas sheets, the About section) are complete in Romanian and English; in FR/IT/ES/PT/DE/HU the English version is displayed with a discreet "text in English" note.
 - **Accessibility**: fully keyboard-playable (arrows + Enter/Space, H for a hint), `aria-live` for the game state, visible focus, touch targets of at least 44 px, `prefers-reduced-motion`, a distinct-colours mode for colour blindness (♦ blue, ♣ green), no horizontal scroll at 390 px.
 - Local statistics (matches played/won) and preferences (language, level, colours) in `localStorage`, in `try/catch` blocks; the app also works without them.
 
@@ -117,4 +119,4 @@ Alexio — Alexandru-Ionuț Chiuță, alexio@trom.tf
 
 ## Summary
 
-Belot without borders is a single-file, offline atlas and game of the belote family: Romanian Belot (priority), classic French Belote, Belote contrée, Bela, Klaverjas (Amsterdam and Rotterdam) and Jass (Schieber) are playable against an AI that never sees hidden hands; five more relatives are atlas-only. Every approximation is flagged with ⚠. UI in 7 languages (long texts in Romanian and English only), keyboard-playable, colour-blind option, no network, no telemetry, no account. Licence: undeclared (the author's decision).
+Belot without borders is a single-file, offline atlas and game of the belote family: Romanian Belot (priority), classic French Belote, Belote contrée, Bela, Klaverjas (Amsterdam and Rotterdam) and Jass (Schieber) are playable against an AI that never sees hidden hands; five more relatives are atlas-only. Every approximation is flagged with ⚠. UI in 8 languages (long texts in Romanian and English only), keyboard-playable, colour-blind option, no network, no telemetry, no account. Licence: undeclared (the author's decision).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.2 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.2.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -90,6 +90,10 @@ Az alkalmazásban jelzett regionális eltérések: a belot.md bile-t és a bizon
 Töltsd le az `index.html` fájlt, és nyisd meg a böngészőben; internet nélkül teljes mértékben működik. Szerver és telepítés nélkül.
 
 ## Előzmények / Changelog
+
+### 1.2.3 — 2026-10-22
+
+mobil és kisegítő finomítások: legalább 12 px-es szöveg és legalább 24 px-es érintési felületek. a műszaki címke most felsorolja mind a 8 felületi nyelvet; látható billentyűzetfókusz minden vezérlőn.
 
 ### 1.1.0 — 2026-10-14
 - Biztonsági mentés és adatcímkézés (fff-kit).

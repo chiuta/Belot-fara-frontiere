@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.2 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.3 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -90,6 +90,10 @@ Differenze regionali annotate nell'applicazione: belot.md usa le bile e le regol
 Scarica `index.html` e aprilo nel browser; funziona completamente senza internet. Senza server, senza installazione.
 
 ## Cronologia / Changelog
+
+### 1.2.3 — 2026-10-22
+
+rifiniture per mobile e accessibilità: testo di almeno 12 px e aree tattili di almeno 24 px. l’etichetta tecnica elenca ora tutte e 8 le lingue dell’interfaccia; focus da tastiera visibile su ogni controllo.
 
 ### 1.1.0 — 2026-10-14
 - Copia di riserva ed etichettatura dei dati (fff-kit).

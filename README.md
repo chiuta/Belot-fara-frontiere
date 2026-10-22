@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.2 · **Last updated:** 2026-10-19
+**Version:** 1.2.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -90,6 +90,10 @@ Regional differences noted in the app: belot.md uses bile and the bizon/7 exchan
 Download `index.html` and open it in the browser; it works fully without internet. No server, no installation.
 
 ## History / Changelog
+
+### 1.2.3 — 2026-10-22
+
+mobile and accessibility polish: text at least 12 px and touch targets at least 24 px. the technical label now lists all 8 interface languages; visible keyboard focus on every control.
 
 ### 1.1.0 — 2026-10-14
 - Backup and data labelling (fff-kit).

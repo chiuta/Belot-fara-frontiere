@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "belot-fara-frontiere",
   "name": "Belot fără frontiere — atlas și joc contra AI",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "updated": "2026-10-22",
   "description": "Belot fără frontiere: atlas și joc contra AI — belot românesc, belote, contrée, bela, klaverjas, jass. Offline, fără cont, fără telemetrie.",
   "egress": [],
@@ -12,8 +12,8 @@
     "Web Crypto"
   ],
   "storageKeys": [],
-  "sizeBytes": 431018,
-  "sha256": "23059b673e2560a6ca92faf9ae25c73f1764663b640c247d5e0f9ca18fe31855",
+  "sizeBytes": 431486,
+  "sha256": "8e9a696e1ee8b2f2fac80387a8764c0e31bf95d6720506454d6dabad11603761",
   "csp": {
     "present": true,
     "directives": {
@@ -54,7 +54,7 @@
     ]
   },
   "kit": {
-    "version": "1.1.1",
+    "version": "1.1.2",
     "modules": [
       "core",
       "label",

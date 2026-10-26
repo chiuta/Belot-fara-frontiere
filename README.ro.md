@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.7 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -32,6 +32,8 @@ Verificate în cod și în teste:
 - **Atlas** căutabil, filtrabil (jucabile/doar atlas, familie), cu fișe: reguli, diferențe regionale, ⚠ aproximări, surse.
 - **Interfață în 8 limbi** (RO/EN/FR/IT/ES/PT/DE/HU), cu autodetecție și selector. Textele lungi (fișele din atlas, secțiunea Despre) sunt complete în română și engleză; în FR/IT/ES/PT/DE/HU se afișează varianta engleză cu o notă discretă „text în engleză”.
 - **Accesibilitate**: joc complet de la tastatură (săgeți + Enter/Spațiu, H pentru sugestie), `aria-live` pentru starea jocului, focus vizibil, ținte tactile de cel puțin 44 px, `prefers-reduced-motion`, mod de culori distincte pentru daltonism (♦ albastru, ♣ verde), fără scroll orizontal la 390 px.
+- **Masă în echipă (2.0.0)**: până la trei prieteni se pot alătura de pe telefoane diferite, direct (WebRTC, fără server, schimb manual de coduri sau QR). Gazda ține jocul și validează fiecare licitație și carte; oaspeții primesc doar propria mână (cărțile celorlalți nu pleacă niciodată din dispozitivul gazdei). Locurile libere rămân AI, iar dacă un oaspete iese, locul revine AI. Sugestia și modul învățare sunt oprite la masă.
+- **Reluarea mâinii (2.0.0)**: după fiecare mână, buton „Reluare mână” cu distribuirea inițială și levată cu levată (cine a jucat ce, cine a câștigat, câte puncte, cărțile rămase). Funcționează și în jocul solo.
 - Statistici locale (meciuri jucate/câștigate) și preferințe (limbă, nivel, culori) în `localStorage`, în blocuri `try/catch`; aplicația merge și fără ele.
 
 ## Variante
@@ -64,6 +66,7 @@ Verificate în cod și în teste:
 ## Confidențialitate și rețea
 
 - Fără rețea: nu există `fetch`, `XMLHttpRequest`, `WebSocket` sau resurse externe; CSP `default-src 'none'` fără `connect-src`; scripturile rulează doar pe baza hash-urilor sha256 calculate la build; `style-src 'unsafe-inline'` este necesar pentru stilurile din pagină.
+- Masa în echipă folosește conexiuni WebRTC directe între dispozitive, pornite doar la cererea ta, după un avertisment (adresele IP se văd între parteneri); nu există server de mesaje.
 - Fără telemetrie, fără cont, fără cookie-uri. În `localStorage` se păstrează doar limba, nivelul AI, culorile distincte, varianta și statisticile locale.
 - Singurele linkuri externe sunt cele din colțul paginii (Buy Me a Coffee), cu `rel="noopener"`; se deschid doar la clic.
 

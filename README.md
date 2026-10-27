@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.1.0 · **Last updated:** 2026-10-27
+**Version:** 2.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable; review 2026-10-27 applied (see CHANGELOG.md); unified local multiplayer is **planned**, not yet implemented · **Offline:** complete (no network requests)
 
@@ -27,6 +27,7 @@ Verified in the code and in tests:
 - **Obligations** to follow suit, trump and over-trump (except for a winning partner, where the variant's rule allows it); illegal cards are dimmed, and trying to play them shows the reason.
 - **Announcements** detected automatically (exhaustive search for the best split into sequences and four-of-a-kinds), contest between teams (tie = cancellation in RO — optionally rotation —, rotation in the others), the team with no tricks loses the announcements (the belot stays).
 - **AI with 3 real levels**: 0 random legal; 1 heuristic (estimating the trump from the hand through simulations, trump counting, partner play); 2 PIMC search (Monte Carlo simulations on "worlds" compatible with what it has seen). The AI **has no access to the hidden hands** (it receives only the player's view); exception: the explicit "Learning mode" option, which **shows you** the hands — the AI still does not use them.
+  **Checked by simulation** (`tests/niveluri-sim.test.mjs`, Romanian rules, 240 hands per pairing, seats alternated, results of 2026-10-27): level 2 beats level 0 by 171–67 (z = 6.7), level 1 beats level 0 by 163–74 (z = 5.8); level 2 beats level 1 by 139–100 (mean margin +22 points/hand, z = 2.5, barely at the edge of significance — the gap between 1 and 2 is real but small).
 - **Belot (K+Q of trump)**: in Romanian belot it is announced only at the second card (the AI deduces nothing from the first card); in the other variants, at the first, as at Pagat.
 - **Hint** (H): the level-2 AI suggests a card or a bid.
 - **Score sheet**: after the second hand, the result window shows the table of all hands of the match (points added → total), in the 8 languages.

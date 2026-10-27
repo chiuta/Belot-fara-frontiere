@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabilă; recenzia din 2026-10-27 aplicată (vezi CHANGELOG.md); modul multiplayer local unificat este **planificat**, neimplementat · **Offline:** complet (fără cereri de rețea)
 
@@ -27,6 +27,7 @@ Verificate în cod și în teste:
 - **Obligații** de servit, tăiat și supra-tăiat (cu excepția partenerului care câștigă, unde regula variantei o permite), cărțile ilegale sunt estompate, iar încercarea de a le juca afișează motivul.
 - **Anunțuri** detectate automat (căutare exhaustivă a celei mai bune împărțiri în secvențe și careuri), concurs între echipe (egalitate = anulare în RO — opțional rotație —, rotație în celelalte), echipa fără levate pierde anunțurile (belotul rămâne).
 - **AI cu 3 niveluri reale**: 0 aleator legal; 1 euristic (estimarea atuului din mână prin simulări, numărarea atuurilor, joc de partener); 2 căutare PIMC (simulări Monte-Carlo pe „lumi” compatibile cu ce a văzut). AI-ul **nu are acces la mâinile ascunse** (primește doar vederea jucătorului); excepție: opțiunea explicită „Mod învățare” care **îți arată** mâinile, AI-ul tot nu le folosește.
+  **Verificat prin simulare** (`tests/niveluri-sim.test.mjs`, regulile românești, 240 de mâini pe pereche, locuri alternate, rezultate la 2026-10-27): nivelul 2 bate nivelul 0 cu 171–67 (z = 6,7), nivelul 1 bate nivelul 0 cu 163–74 (z = 5,8); nivelul 2 bate nivelul 1 cu 139–100 (marjă medie +22 puncte/mână, z = 2,5, adică de-abia la limita semnificației — diferența dintre 1 și 2 este reală, dar mică).
 - **Belot (K+Q de atu)**: la belotul românesc se anunță doar la a doua carte (AI-ul nu deduce nimic din prima carte); la celelalte variante, la prima, ca la Pagat.
 - **Sugestie** (H): AI-ul de nivel 2 îți propune o carte sau o licitație.
 - **Foaia de scor**: după a doua mână, fereastra de rezultat arată tabelul tuturor mâinilor meciului (puncte adăugate → total), în cele 8 limbi.

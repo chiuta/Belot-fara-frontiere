@@ -1,5 +1,9 @@
 # Jurnal de modificări
 
+## 2.2.4 — 2026-11-08
+
+- Fișa „Belot românesc”: 3 exemple concrete pentru situațiile disputate (partener care câștigă, anunțuri egale, la jumătate), RO/EN.
+
 ## 2.2.1 — 2026-11-03
 
 Turneu și clasament Elo local (motor comun de jocuri), rezultate notate de mână
